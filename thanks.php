@@ -32,7 +32,7 @@
                                 <li><a href="candles.php">Свещи</a></li>
                                 <li><a href="#">Оборудване</a></li>
                                 <li><a href="#">Курсове</a></li>
-                                <li><a class="active" href="contacts.html">Контакти</a></li>
+                                <li><a href="contacts.html">Контакти</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -71,19 +71,23 @@
                                         <div class="wrapper">
                                             <div class="grid_12">
                                             	<div class="indent-left">
-                                                	<h3 class="p2">Contact Form</h3>
-                                                    <form action="thanks.php" id="contact-form" method="post" enctype="multipart/form-data">                    
-                                                        <fieldset>
-                                                              <label><span class="text-form">Name:</span><input name="name" type="text" /></label>
-                                                              <label><span class="text-form">Email:</span><input name="email" type="text" /></label>   
-                                                              <label><span class="text-form">Phone:</span><input name="phone" type="text" /></label>                                    
-                                                              <div class="wrapper"><div class="text-form">Message:</div><textarea name="comment"></textarea></div>
-                                                              <div class="buttons">
-                                                                  <a class="button" href="#" onClick="document.getElementById('contact-form').reset()">Clear</a>
-                                                                  <a class="button" href="#" onClick="document.getElementById('contact-form').submit()">Send</a>
-                                                              </div>                             
-                                                        </fieldset>						
-                                                    </form>
+                                                    <?php 
+                                                    $name = $_POST['name'];
+                                                    $email = $_POST['email'];
+                                                    $phone = $_POST['phone'];
+                                                    $comment = $_POST['comment'];
+                                                    echo "Здравейте " . $name . ". Благодарим ви за вашето запитване. В най-скоро време 
+                                                    очаквайте да се свържем с вас на телефон " . $phone . " или на email " . $email;
+                                                    $to      = 'simo_real@abv.bg'; //n_sadonkov@yahoo.com
+                                                    $subject = 'Test subject art studio';
+                                                    $message =  $name . " изпрати следното съобщение:\r\n" . $comment . "\r\n" . "Телефон: " . $phone;
+                                                    $headers = 'From: ' . $email . "\r\n" .
+                                                    'Reply-To: ' . $email . "\r\n" .
+                                                    'Cc: simopopov@gmail.com' . "\r\n" .
+                                                    'X-Mailer: PHP/' . phpversion();
+
+                                                    mail($to, $subject, $message, $headers);
+                                                    ?>
                                                 </div>
                                             </div>
                                         </div>

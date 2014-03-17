@@ -45,9 +45,12 @@ p {margin-bottom:18px}
 .spacing {margin-right:35px}
 .indent-top {padding-top:13px}
 .indent-top2 {padding-top:4px}
+.indent-top2 {font-size: 14px;font-family:"Comic Sans MS", cursive, sans-serif;}
+
 .indent-right {padding-right:30px}
 .indent-right2 {padding-right:10px}
 .indent-left {padding-left:30px}
+.indent-left {font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif;}
 .indent {padding:0 10px 0 30px}
 .indent2 {padding-left:50px}
 .indent3 {padding:0 15px}
@@ -61,7 +64,8 @@ p {margin-bottom:18px}
 .img-indent2 {float:left; margin:0 30px 0px 0}	
 .img-indent3 {float:left; margin:0 23px 0px 0}	
 .img-indent-r {float:right; margin:0 0px 0px 40px}	
-.prev-indent-bot {margin-bottom:10px}	
+.prev-indent-bot {margin-bottom:10px}
+p.prev-indent-bot {font-size: 14px;font-family:"Comic Sans MS", cursive, sans-serif;}	
 .prev-indent-bot2 {margin-bottom:5px}	
 .buttons a:hover {cursor:pointer}
 .menu li a, .list-1 li a, .list-2 li a, .link, .button, .logo {text-decoration:none}
@@ -77,7 +81,7 @@ h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:upper
 .menu {padding:0;width:100%}
 .menu li {float:left;position:relative}
 	.menu li:first-child {background:url(../images/menu-a-tail.gif) 0 -71px no-repeat}
-.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:188px;font-size:21px;line-height:1.238em;padding:21px 0 24px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
+.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:134px;font-size:21px;line-height:1.238em;padding:21px 0 24px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
 .menu li a:hover,
 .menu li a.active {color:#fff;background-position:left top;background-repeat:repeat-x;background-color:#000}
 /***** search form *****/

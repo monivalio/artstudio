@@ -73,11 +73,13 @@
                     <div class="grid_12">
                         <nav>
                             <ul class="menu">
-                                <li><a href="index.php">About Us</a></li>
-                                <li><a href="ceramics.php">Ceramics</a></li>
-                                <li><a href="glass.php">Glass</a></li>
-                                <li><a class="active" href="candles.php">Candles</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="index.php">За нас</a></li>
+                                <li><a href="ceramics.php">Керамика</a></li>
+                                <li><a href="glass.php">Стъкло</a></li>
+                                <li><a class="active" href="candles.php">Свещи</a></li>
+                                <li><a href="#">Оборудване</a></li>
+                                <li><a href="#">Курсове</a></li>
+                                <li><a href="contacts.html">Контакти</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -112,7 +114,7 @@
             <ul class="gallery clearfix">
             <p class="gallery_desc">Тук можем да праснем всякакво и обширно инфо за candles</p>
                 <?php
-                    if ($handle = opendir('C:\xampp\htdocs\interio\images\fullscreen\candles')) {
+                    if ($handle = opendir('images/fullscreen/candles')) {
                         $i = 0;
                         while (false !== ($entry = readdir($handle))) {
                             if ($entry != "." && $entry != "..") {
@@ -120,7 +122,7 @@
                                 echo "$entry\n";
                                 echo "\" rel=\"prettyPhoto[gal2]\"><img src=\"images/fullscreen/candles/";
                                 echo "$entry\n";
-                                echo  "\" width=\"100\" height=\"100\" alt=\"Snimka edno\" /></a></li> \n";
+                                echo  "\" width=\"100\" height=\"100\" /></a></li> \n";
                                 $i++;
                                 if($i % 9==0)
                                 {
@@ -172,12 +174,10 @@
                             Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. </p>
                         </article>
                         <article class="grid_4">
-                            <h3 class="prev-indent-bot">Нещица</h3>
+                            <h3 class="prev-indent-bot">Оборудване</h3>
                             
-                                <p class="prev-indent-bot">Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. 
-                                Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. 
-                                Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. 
-                                Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. </p>
+                                <p class="prev-indent-bot">Инфо за оборудване ... Инфо за оборудване ... Инфо за оборудване ... 
+                                Инфо за оборудване ... Инфо за оборудване ... Инфо за оборудване ... Инфо за оборудване ... </p>
                            
                         </article>
                         <article class="grid_4">

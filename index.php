@@ -73,11 +73,13 @@
                     <div class="grid_12">
                         <nav>
                             <ul class="menu">
-                                <li><a class="active" href="index.php">About Us</a></li>
-                                <li><a href="ceramics.php">Ceramics</a></li>
-                                <li><a href="glass.php">Glass</a></li>
-                                <li><a href="candles.php">Candles</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a class="active" href="index.php">За нас</a></li>
+                                <li><a href="ceramics.php">Керамика</a></li>
+                                <li><a href="glass.php">Стъкло</a></li>
+                                <li><a href="candles.php">Свещи</a></li>
+                                <li><a href="#">Оборудване</a></li>
+                                <li><a href="#">Курсове</a></li>
+                                <li><a href="contacts.html">Контакти</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -108,52 +110,32 @@
                 <div class="bg">
                     <div class="bg-top-shadow">
                         <div class="main">
-            <h2>Gallery 2</h2>
-            <ul class="gallery clearfix">
-            <p class="gallery_desc">Тук можем да праснем всякакво и обширно инфо за ceramics</p>
-                <?php
-                    if ($handle = opendir('C:\xampp\htdocs\interio\images\fullscreen\ceramics')) {
-                        $i = 0;
-                        while (false !== ($entry = readdir($handle))) {
-                            if ($entry != "." && $entry != "..") {
-                                echo "<li><a href=\"images/fullscreen/ceramics/";
-                                echo "$entry\n";
-                                echo "\" rel=\"prettyPhoto[gal2]\"><img src=\"images/fullscreen/ceramics/";
-                                echo "$entry\n";
-                                echo  "\" width=\"100\" height=\"100\" alt=\"Snimka edno\" /></a></li> \n";
-                                $i++;
-                                if($i % 9==0)
-                                {
-                                    echo "<br><br>";
-                                }
-                                
-                            }
-                        }
-                        closedir($handle);
-                    }
-
-                ?>
-            </ul>
-
-    
-            <script type="text/javascript" charset="utf-8">
-            $(document).ready(function(){
-                $("area[rel^='prettyPhoto']").prettyPhoto();
-                
-                $(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
-                $(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
-        
-                $("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
-                    custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
-                    changepicturecallback: function(){ initialize(); }
-                });
-
-                $("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
-                    custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
-                    changepicturecallback: function(){ _bsap.exec(); }
-                });
-            });
-            </script>
+                            <div class="gallery p3">
+                                <div class="wrapper indent-bot">
+                                    <div id="gallery" class="content">
+                                       <div class="wrapper">
+                                           <div class="slideshow-container">
+                                                <div id="slideshow1" class="slideshow1">
+                                                    <img src="images/gallery-3.jpg" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="thumbs" class="navigation">
+                                        <img src="images/gallery-4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <div class="wrapper">
+                                        <span class="title img-indent3">HELLO!</span>
+                                        <div class="extra-wrap indent-top2">
+                                            Някакъв текст за въведение ... Някакъв текст за въведение ... Някакъв текст за въведение ... 
+                                            Някакъв текст за въведение ... Някакъв текст за въведение ... Някакъв текст за въведение ... 
+                                            Някакъв текст за въведение ... Някакъв текст за въведение ... Някакъв текст за въведение ... 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
                         </div>
                     </div>
@@ -172,12 +154,10 @@
                             Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. Инфо за мен. </p>
                         </article>
                         <article class="grid_4">
-                            <h3 class="prev-indent-bot">Нещица</h3>
+                            <h3 class="prev-indent-bot">Оборудване</h3>
                             
-                                <p class="prev-indent-bot">Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. 
-                                Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. 
-                                Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. 
-                                Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. Инфо за моите неща. </p>
+                                <p class="prev-indent-bot">Инфо за оборудване ... Инфо за оборудване ... Инфо за оборудване ... 
+                                Инфо за оборудване ... Инфо за оборудване ... Инфо за оборудване ... Инфо за оборудване ... </p>
                            
                         </article>
                         <article class="grid_4">
