@@ -6,7 +6,7 @@
 	  Author: TemplateMonster.com Team
 	  Author URI: http://www.templatemonster.com/
 
-======================================================================
+=======================================================================
 
 
    +++ Be sure to visit TemplateMonster.com for more website templates +++
