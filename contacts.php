@@ -79,11 +79,13 @@
                                                               <label><span class="text-form">Email:</span><input name="email" type="text" /></label>   
                                                               <label><span class="text-form">Phone:</span><input name="phone" type="text" /></label>                                    
                                                               <div class="wrapper"><div class="text-form">Message:</div><textarea name="comment"></textarea></div>
+                                                              <div class="captcha">
                                                               <?php
                                                                 require_once('recaptchalib.php');
                                                                 $publickey = "6Lc9m_ASAAAAADETuGiC8l5pszAtDC1ygo6nx3en"; // you got this from the signup page
                                                                 echo recaptcha_get_html($publickey);
                                                                 ?>
+                                                                </div>
                                                               <div class="buttons">
                                                                   <a class="button" href="#" onClick="document.getElementById('contact-form').reset()">Clear</a>
                                                                   <a class="button" href="#" onClick="document.getElementById('contact-form').submit()">Send</a>
