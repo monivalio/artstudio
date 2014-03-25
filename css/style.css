@@ -96,7 +96,7 @@ h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:upper
 .padding {padding:30px 0px 38px}
 /* -- gallery  begin --*/
  div.content {/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
-	position: relative; top: 80; display: none;width: 620px;height: 403px;margin:  0;padding: 0px;float: left;overflow: hidden}
+	position: relative; top: 150; display: none;width: 620px;height: 403px;margin:  0;padding: 0px;float: left;overflow: hidden}
  div.content img {position: relative;z-index: 2}
  div.content a, div.navigation a {text-decoration: none;display:block;position:relative;cursor:pointer}
 	div.content a img, div.navigation a img {position:relative;	z-index:1}
