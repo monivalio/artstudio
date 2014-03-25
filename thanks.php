@@ -76,18 +76,37 @@
                                                     $email = $_POST['email'];
                                                     $phone = $_POST['phone'];
                                                     $comment = $_POST['comment'];
-                                                    echo "Здравейте " . $name . ". Благодарим ви за вашето запитване. В най-скоро време 
-                                                    очаквайте да се свържем с вас на телефон " . $phone . " или на email " . $email;
-                                                    $to      = 'simo_real@abv.bg'; //n_sadonkov@yahoo.com
-                                                    $subject = 'Test subject art studio';
-                                                    $message =  $name . " изпрати следното съобщение:\r\n" . $comment . "\r\n" . "Телефон: " . $phone;
-                                                    $headers = 'From: ' . $email . "\r\n" .
-                                                    'Reply-To: ' . $email . "\r\n" .
-                                                    'Cc: simopopov@gmail.com' . "\r\n" .
-                                                    'X-Mailer: PHP/' . phpversion();
-                                                    
-                                                    //mail($to, $subject, $message, $headers);
-                                                    ?>
+=======
+                                                      require_once('recaptchalib.php');
+                                                      $privatekey = "6Lc9m_ASAAAAAFcPvOkGg-BXA9QDiR1jkIe2-s1N";
+                                                      $resp = recaptcha_check_answer ($privatekey,
+                                                                                      $_SERVER["REMOTE_ADDR"],
+                                                                                      $_POST["recaptcha_challenge_field"],
+                                                                                      $_POST["recaptcha_response_field"]);
+                                                      
+                                                      if (!$resp->is_valid) {
+                                                          // What happens when the CAPTCHA was entered incorrectly
+                                                          die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
+                                                              "(reCAPTCHA said: " . $resp->error . ")");
+                                                      } else {
+                                                             $name = $_POST['name'];
+                                                             $email = $_POST['email'];
+                                                             $phone = $_POST['phone'];
+                                                             $comment = $_POST['comment'];
+                                                             echo "Здравейте " . $name . ". Благодарим ви за вашето запитване. В най-скоро време 
+                                                             очаквайте да се свържем с вас на телефон " . $phone . " или на email " . $email;
+                                                             $to      = 'simo_real@abv.bg'; //n_sadonkov@yahoo.com
+                                                             $subject = 'Test subject art studio';
+                                                             $message =  $name . " изпрати следното съобщение:\r\n" . $comment . "\r\n" . "Телефон: " . $phone;
+                                                             $headers = 'From: ' . $email . "\r\n" .
+                                                             'Reply-To: ' . $email . "\r\n" .
+                                                             'Cc: simopopov@gmail.com' . "\r\n" .
+                                                             'X-Mailer: PHP/' . phpversion();
+                                                             
+                                                             mail($to, $subject, $message, $headers);
+                                                             }
+?>
+>>>>>>> bfcdd918ad5488631f242f37a006293194b2f881
                                                 </div>
                                             </div>
                                         </div>
@@ -130,22 +149,3 @@
     </section>
     
 	<!--==============================footer=================================-->
-    <footer>
-        <div class="main">
-            <div class="container_12">
-                <div class="wrapper">
-                    
-                    <div class="grid_4">
-                        <span class="phone-numb"><span>+359</span> 889990228</span>
-                    </div>
-                    <div class="grid_4">
-                        <ul class="list-services">
-                            <li><a href="https://www.facebook.com/pages/Art-Glass-Studio-Ceramics/588328351186854"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>

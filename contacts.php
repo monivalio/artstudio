@@ -73,16 +73,17 @@
                                             	<div class="indent-left">
                                                 	<h3 class="p2">Contact Form</h3>
                                                     <form action="thanks.php" id="contact-form" method="post" enctype="multipart/form-data">   
-                                                        <?php
-                                                        require_once('recaptchalib.php');
-                                                        $publickey = "6Lc9m_ASAAAAADETuGiC8l5pszAtDC1ygo6nx3en"; // you got this from the signup page
-                                                        echo recaptcha_get_html($publickey);
-                                                        ?>
+                                                        
                                                         <fieldset>
                                                               <label><span class="text-form">Name:</span><input name="name" type="text" /></label>
                                                               <label><span class="text-form">Email:</span><input name="email" type="text" /></label>   
                                                               <label><span class="text-form">Phone:</span><input name="phone" type="text" /></label>                                    
                                                               <div class="wrapper"><div class="text-form">Message:</div><textarea name="comment"></textarea></div>
+                                                              <?php
+                                                                require_once('recaptchalib.php');
+                                                                $publickey = "6Lc9m_ASAAAAADETuGiC8l5pszAtDC1ygo6nx3en"; // you got this from the signup page
+                                                                echo recaptcha_get_html($publickey);
+                                                                ?>
                                                               <div class="buttons">
                                                                   <a class="button" href="#" onClick="document.getElementById('contact-form').reset()">Clear</a>
                                                                   <a class="button" href="#" onClick="document.getElementById('contact-form').submit()">Send</a>
