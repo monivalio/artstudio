@@ -72,22 +72,36 @@
                                             <div class="grid_12">
                                             	<div class="indent-left">
                                                     <?php 
-                                                    $name = $_POST['name'];
-                                                    $email = $_POST['email'];
-                                                    $phone = $_POST['phone'];
-                                                    $comment = $_POST['comment'];
-                                                    echo "Здравейте " . $name . ". Благодарим ви за вашето запитване. В най-скоро време 
-                                                    очаквайте да се свържем с вас на телефон " . $phone . " или на email " . $email;
-                                                    $to      = 'simo_real@abv.bg'; //n_sadonkov@yahoo.com
-                                                    $subject = 'Test subject art studio';
-                                                    $message =  $name . " изпрати следното съобщение:\r\n" . $comment . "\r\n" . "Телефон: " . $phone;
-                                                    $headers = 'From: ' . $email . "\r\n" .
-                                                    'Reply-To: ' . $email . "\r\n" .
-                                                    'Cc: simopopov@gmail.com' . "\r\n" .
-                                                    'X-Mailer: PHP/' . phpversion();
                                                     
-                                                    mail($to, $subject, $message, $headers);
-                                                    ?>
+                                                      require_once('recaptchalib.php');
+                                                      $privatekey = "6Lc9m_ASAAAAAFcPvOkGg-BXA9QDiR1jkIe2-s1N";
+                                                      $resp = recaptcha_check_answer ($privatekey,
+                                                                                      $_SERVER["REMOTE_ADDR"],
+                                                                                      $_POST["recaptcha_challenge_field"],
+                                                                                      $_POST["recaptcha_response_field"]);
+                                                      
+                                                      if (!$resp->is_valid) {
+                                                          // What happens when the CAPTCHA was entered incorrectly
+                                                          die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
+                                                              "(reCAPTCHA said: " . $resp->error . ")");
+                                                      } else {
+                                                             $name = $_POST['name'];
+                                                             $email = $_POST['email'];
+                                                             $phone = $_POST['phone'];
+                                                             $comment = $_POST['comment'];
+                                                             echo "Здравейте " . $name . ". Благодарим ви за вашето запитване. В най-скоро време 
+                                                             очаквайте да се свържем с вас на телефон " . $phone . " или на email " . $email;
+                                                             $to      = 'simo_real@abv.bg'; //n_sadonkov@yahoo.com
+                                                             $subject = 'Test subject art studio';
+                                                             $message =  $name . " изпрати следното съобщение:\r\n" . $comment . "\r\n" . "Телефон: " . $phone;
+                                                             $headers = 'From: ' . $email . "\r\n" .
+                                                             'Reply-To: ' . $email . "\r\n" .
+                                                             'Cc: simopopov@gmail.com' . "\r\n" .
+                                                             'X-Mailer: PHP/' . phpversion();
+                                                             
+                                                             mail($to, $subject, $message, $headers);
+                                                             }
+?>
                                                 </div>
                                             </div>
                                         </div>
