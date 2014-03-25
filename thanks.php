@@ -95,7 +95,7 @@
                                                              echo "Здравейте " . $name . ". Благодарим ви за вашето запитване. В най-скоро време 
                                                              очаквайте да се свържем с вас на телефон " . $phone . " или на email " . $email;
                                                              $to      = 'simo_real@abv.bg'; //n_sadonkov@yahoo.com
-                                                             $subject = 'Test subject art studio';
+                                                             $subject = 'Test webmail server';
                                                              $message =  $name . " изпрати следното съобщение:\r\n" . $comment . "\r\n" . "Телефон: " . $phone;
                                                              $headers = 'From: ' . $email . "\r\n" .
                                                              'Reply-To: ' . $email . "\r\n" .
