@@ -76,7 +76,6 @@
                                                     $email = $_POST['email'];
                                                     $phone = $_POST['phone'];
                                                     $comment = $_POST['comment'];
-=======
                                                       require_once('recaptchalib.php');
                                                       $privatekey = "6Lc9m_ASAAAAAFcPvOkGg-BXA9QDiR1jkIe2-s1N";
                                                       $resp = recaptcha_check_answer ($privatekey,
@@ -104,9 +103,8 @@
                                                              'X-Mailer: PHP/' . phpversion();
                                                              
                                                              mail($to, $subject, $message, $headers);
-                                                             }
-?>
->>>>>>> bfcdd918ad5488631f242f37a006293194b2f881
+                                                             }?>
+
                                                 </div>
                                             </div>
                                         </div>
