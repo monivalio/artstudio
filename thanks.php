@@ -32,7 +32,7 @@
                                 <li><a href="candles.php">Свещи</a></li>
                                 <li><a href="#">Оборудване</a></li>
                                 <li><a href="#">Курсове</a></li>
-                                <li><a href="contacts.html">Контакти</a></li>
+                                <li><a href="contacts.php">Контакти</a></li>
                             </ul>
                         </nav>
                     </div>
