@@ -70,8 +70,8 @@ p.prev-indent-bot {font-size: 14px;font-family:"Comic Sans MS", cursive, sans-se
 .buttons a:hover {cursor:pointer}
 .menu li a, .list-1 li a, .list-2 li a, .link, .button, .logo {text-decoration:none}
 /*********************************header*************************************/
-header {width:100%;position:relative;z-index:2}
-.row-1 {position:fixed; width:100%;height:71px;background:url(../images/row1-top-tail.gif) left top repeat-x}
+header {position:fixed; width:100%;position:relative;z-index:2}
+.row-1 {width:100%;height:71px;background:url(../images/row1-top-tail.gif) left top repeat-x}
 .row-2 {width:100%;min-height:101px;background:url(../images/row2-tail.gif) left top repeat-x #fff}
 h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:uppercase;margin-left:-4px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
 	h1 span {display:inline-block;	font-size:14px;	line-height:1.2em;	color:#949494;	letter-spacing:-1px;	padding:29px 0 0 4px}
