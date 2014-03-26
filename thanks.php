@@ -83,6 +83,7 @@
                                                         return true;
                                                     }
                                                     return false;
+                                                    }
                                                     $name = $_POST['name'];
                                                     $email = $_POST['email'];
                                                     $phone = $_POST['phone'];
@@ -102,7 +103,7 @@
                                                              $name = $_POST['name'];
                                                              $email = $_POST['email'];
                                                              if (!checkEmail($email)) {
-                                                                 exit(0);
+                                                                 die("This email address is considered valid.");
                                                                  
                                                              }
                                                              $phone = $_POST['phone'];
