@@ -76,8 +76,8 @@
                                                         
                                                         <fieldset>
                                                               <label><span class="text-form">Name:</span><input name="name" type="text" /></label>
-                                                              <label><span class="text-form">Email:</span><input name="email" type="text" /></label>   
-                                                              <label><span class="text-form">Phone:</span><input name="phone" type="text" /></label>                                    
+                                                              <label><span class="text-form">Email:</span><input name="email" type="email" /></label>   
+                                                              <label><span class="text-form">Phone:</span><input name="phone" type="tel" /></label>                                    
                                                               <div class="wrapper"><div class="text-form">Message:</div><textarea name="comment"></textarea></div>
                                                               <div align="right">
                                                               <?php
