@@ -90,6 +90,10 @@
                                                       } else {
                                                              $name = $_POST['name'];
                                                              $email = $_POST['email'];
+                                                             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                                                                 die("This email address is considered valid.");
+                                                                 
+                                                             }
                                                              $phone = $_POST['phone'];
                                                              $comment = $_POST['comment'];
                                                              echo "Здравейте " . $name . ". Благодарим ви за вашето запитване. В най-скоро време 
