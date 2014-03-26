@@ -71,7 +71,18 @@
                                         <div class="wrapper">
                                             <div class="grid_12">
                                             	<div class="indent-left">
-                                                    <?php 
+                                                    <?php
+                                                    function checkEmail($email) {
+                                                    if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])
+                                                    ↪*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",
+                                                                $email)){
+                                                        list($username,$domain)=split('@',$email);
+                                                        if(!checkdnsrr($domain,'MX')) {
+                                                        return false;
+                                                        }
+                                                        return true;
+                                                    }
+                                                    return false;
                                                     $name = $_POST['name'];
                                                     $email = $_POST['email'];
                                                     $phone = $_POST['phone'];
@@ -90,7 +101,7 @@
                                                       } else {
                                                              $name = $_POST['name'];
                                                              $email = $_POST['email'];
-                                                             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                                                             if (!checkEmail($email)) {
                                                                  die("This email address is considered valid.");
                                                                  
                                                              }
