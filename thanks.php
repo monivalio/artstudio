@@ -91,7 +91,7 @@
                                                              $name = $_POST['name'];
                                                              $email = $_POST['email'];
                                                              if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                                                                 die("This email address is considered valid.");
+                                                                 die("This email address is not valid.");
                                                                  
                                                              }
                                                              $phone = $_POST['phone'];
