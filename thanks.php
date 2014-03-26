@@ -102,7 +102,7 @@
                                                              $name = $_POST['name'];
                                                              $email = $_POST['email'];
                                                              if (!checkEmail($email)) {
-                                                                 die("This email address is considered valid.");
+                                                                 exit(0);
                                                                  
                                                              }
                                                              $phone = $_POST['phone'];
